@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08101a">
+<meta name="description" content="Flight Radar — Explorez vos prochaines destinations et découvrez les opportunités de vols vérifiées.">
+<title>Flight Radar — La liberté de partir.</title>
+<link rel="stylesheet" href="/styles.css">
+<script src="/app.js" defer></script>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="shell">
+  <header class="topbar">
+    <a href="/" class="brand" aria-label="Flight Radar, accueil">
+      <span class="brand-icon">✳</span><span>FLIGHT<span class="brand-accent">RADAR</span></span>
+    </a>
+    <nav class="desktop-nav"><a href="#explorer">Explorer</a><a href="#offres">Les offres</a><a href="#methode">Notre méthode</a></nav>
+    <a href="#explorer" class="small-button">Trouver un vol <span aria-hidden="true">↗</span></a>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <div class="eyebrow"><span class="dot"></span> YOUR NEXT DESTINATION STARTS HERE</div>
+        <h1 id="hero-title">PARTEZ<br><span class="outline">PLUS LOIN.</span><br><em>PAYEZ MOINS.</em></h1>
+        <p class="lead">Pas de promesses absurdes. Les bonnes destinations, les bons jours, les bons prix — une autre façon de chercher son prochain voyage.</p>
+        <div class="hero-actions"><a href="#explorer" class="primary-button">Explorer les destinations <span aria-hidden="true">↗</span></a><a href="#offres" class="text-button">Voir les offres vérifiées <span aria-hidden="true">↘</span></a></div>
+        <div class="hero-meta"><span><b>08</b> aéroports de départ</span><span class="meta-divider"></span><span><b>10</b> destinations suggérées</span><span class="meta-divider"></span><span><b>100 %</b> tarifs à vérifier</span></div>
+      </div>
+      <div class="hero-graphic" aria-hidden="true">
+        <div class="planet"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="orbit orbit-three"></span><span class="meridian"></span><span class="latitudes"></span><span class="planet-glow"></span><span class="aircraft">✈</span><span class="coord coord-a">50° 54' N<br>BRUSSELS / BE</span><span class="coord coord-b">WORLDWIDE<br>EXPLORATION</span></div>
+        <div class="flight-card"><span>READY FOR TAKEOFF</span><strong>EVERYWHERE <span>↗</span></strong><small>BRU / CRL / CDG / AMS / +</small></div>
+      </div>
+      <div class="vertical-copy">EXPLORE / DISCOVER / FLY</div>
+    </section>
+    <section id="explorer" class="explorer wrap" aria-labelledby="explorer-title">
+      <div class="section-head"><div><div class="section-kicker">01 / THE EXPLORER</div><h2 id="explorer-title">Le monde à portée <em>de clic.</em></h2></div><p>Indique tes préférences. On prépare une recherche réelle sur Google Flights, sans inventer de prix.</p></div>
+      <form id="flight-form" class="searchbox">
+        <div class="form-grid">
+          <label><span>AÉROPORT DE DÉPART</span><select id="origin" required><option value="BRU">Bruxelles · BRU</option><option value="CRL">Charleroi · CRL</option><option value="CDG">Paris CDG · CDG</option><option value="ORY">Paris Orly · ORY</option><option value="AMS">Amsterdam · AMS</option><option value="EIN">Eindhoven · EIN</option><option value="LIL">Lille · LIL</option><option value="DUS">Düsseldorf · DUS</option></select></label>
+          <label><span>DESTINATION</span><select id="destination" required><option value="ANY">Surprends-moi ✨</option><option value="LIS">Lisbonne · LIS</option><option value="OPO">Porto · OPO</option><option value="BCN">Barcelone · BCN</option><option value="MAD">Madrid · MAD</option><option value="FCO">Rome · FCO</option><option value="ATH">Athènes · ATH</option><option value="RAK">Marrakech · RAK</option><option value="JFK">New York · JFK</option><option value="BKK">Bangkok · BKK</option><option value="NRT">Tokyo · NRT</option></select></label>
+          <label><span>DATE DE DÉPART</span><input id="departure" type="date" required></label>
+          <label><span>DATE DE RETOUR</span><input id="return" type="date" required></label>
+        </div>
+        <div class="form-bottom"><span class="helper"><span class="pulse"></span> Recherche sur une source publique — prix confirmés sur le comparateur</span><button class="primary-button search-submit" type="submit">Rechercher mes vols <span>↗</span></button></div>
+        <p id="form-error" class="form-error" role="alert" aria-live="polite"></p>
+      </form>
+      <div class="suggestion-head"><span>DESTINATIONS À EXPLORER</span><small>Sélectionne une destination pour préremplir ta recherche</small></div>
+      <div id="destinations" class="destination-grid">
+        <button class="destination" data-destination="LIS"><span class="dest-num">01</span><strong>LISBONNE</strong><small>Portugal / LIS</small><span class="dest-arrow">↗</span></button>
+        <button class="destination" data-destination="BCN"><span class="dest-num">02</span><strong>BARCELONE</strong><small>Espagne / BCN</small><span class="dest-arrow">↗</span></button>
+        <button class="destination" data-destination="RAK"><span class="dest-num">03</span><strong>MARRAKECH</strong><small>Maroc / RAK</small><span class="dest-arrow">↗</span></button>
+        <button class="destination" data-destination="JFK"><span class="dest-num">04</span><strong>NEW YORK</strong><small>États-Unis / JFK</small><span class="dest-arrow">↗</span></button>
+      </div>
+    </section>
+    <section id="offres" class="deals-area wrap">
+      <div class="section-head"><div><div class="section-kicker">02 / REAL DEALS ONLY</div><h2>Des prix. <em>Pas des illusions.</em></h2></div><p>Une baisse n'est publiée qu'après vérification. Pas de remises inventées, pas de chiffres marketing.</p></div>
+      <div class="deals-toolbar"><div class="tabs"><button class="tab active" data-filter="ALL" aria-pressed="true">Toutes les offres</button><button class="tab" data-filter="EUROPE" aria-pressed="false">Europe</button><button class="tab" data-filter="LONG" aria-pressed="false">Long-courrier</button></div><span id="feed-state" class="feed-pill"><span class="pulse"></span> Connexion aux tarifs en attente</span></div>
+      <div id="offers" class="offers" aria-live="polite"><div class="empty-state"><span class="empty-symbol">✳</span><strong>LE RADAR SE PRÉPARE.</strong><p>Les offres apparaîtront ici une fois une source de prix fiables connectée. Tu peux déjà explorer de vrais itinéraires ci-dessus.</p><a href="#explorer">Explorer maintenant ↗</a></div></div>
+    </section>
+    <section id="methode" class="method wrap"><div class="section-kicker">03 / THE WAY WE WORK</div><div class="method-grid"><div class="method-big">NO BULLSHIT.<br><span>JUST FLIGHTS.</span></div><div class="method-copy"><h3>Le bon prix. Au bon moment.</h3><p>Notre moteur compare l'historique des tarifs, détecte les anomalies et ne diffuse que des offres confirmées. Tant que les données en temps réel ne sont pas disponibles, aucun tarif fictif n'est présenté.</p><div class="pill-row"><span>Prix vérifiés</span><span>Dates flexibles</span><span>Sources identifiées</span></div></div></div></section>
+  </main>
+  <footer class="footer wrap"><a class="brand" href="/"><span class="brand-icon">✳</span><span>FLIGHT<span class="brand-accent">RADAR</span></span></a><span>Built to find a way out. © <span id="year"></span></span><span>Beta · Aucun billet vendu sur cette plateforme</span></footer>
+</div>
+</body></html>
