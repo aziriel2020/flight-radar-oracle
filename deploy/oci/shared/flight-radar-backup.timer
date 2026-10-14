@@ -1,0 +1,9 @@
+[Unit]
+Description=Flight Radar daily local backup
+[Timer]
+OnCalendar=daily
+RandomizedDelaySec=30m
+Persistent=true
+Unit=flight-radar-backup.service
+[Install]
+WantedBy=timers.target
