@@ -82,7 +82,7 @@
   }
   function render(){
     const data=available.filter(o=>activeFilter==="ALL" || (activeFilter==="EUROPE"?european.has(o.destination):!european.has(o.destination)));
-    if(!data.length){showEmpty(activeFilter==="ALL"?"Aucune offre fraîche, contrôlée et fiable n'est publiée actuellement.":"Aucune offre vérifiée dans cette catégorie.");return;}
+    if(!data.length){showEmpty(activeFilter==="ALL"?"Aucune observation récente n'est publiée actuellement. Le collecteur automatique peut nécessiter plusieurs cycles.":"Aucun tarif observé dans cette catégorie.");return;}
     const grid=node("div","deal-grid");
     for(const offer of data){
       const card=node("article","deal"),route=node("div","deal-route");
@@ -92,9 +92,9 @@
       const price=node("div","deal-price");
       const num=new Intl.NumberFormat("fr-BE",{maximumFractionDigits:0}).format(offer.price_eur);
       price.append(node("span","",num+" €"));price.append(node("small",""," / aller-retour"));card.append(price);
-      card.append(node("div","deal-date",offer.carrier+" · Vérifié : "+new Date(offer.checked_at).toLocaleTimeString("fr-BE",{hour:"2-digit",minute:"2-digit"})));
+      card.append(node("div","deal-date",offer.carrier+(offer.verified?" · Vérifié : ":" · Observé : ")+new Date(offer.checked_at).toLocaleTimeString("fr-BE",{hour:"2-digit",minute:"2-digit"})));
       const footer=node("div","deal-footer");
-      const score=node("span","deal-score",offer.savings_pct>0?"−"+offer.savings_pct+" % vs historique":"Prix vérifié");footer.append(score);
+      const score=node("span","deal-score",offer.potential_deal&&offer.saving_pct>0?"Signal −"+offer.saving_pct+" % (observé)":offer.verified?"Prix revérifié":"Prix observé · à confirmer");footer.append(score);
       if(offer.link && /^https:\/\//.test(offer.link)){
         const link=node("a","","Revérifier le prix ↗");
         link.href=offer.link;link.rel="noopener noreferrer";link.target="_blank";footer.append(link);
@@ -122,8 +122,8 @@
       Number.isFinite(o.price_eur) && o.price_eur>0 &&
       !Number.isNaN(Date.parse(o.checked_at))
     ):[];
-    if(payload.connected){feedState.textContent="● Radar des offres connecté";}
-    else {feedState.textContent="● Tarifs vérifiés : source en attente";}
+    if(payload.connected){feedState.textContent=payload.status==="ok"?"● Collecte active · prix indicatifs":payload.status==="partial"?"● Collecte partielle · prix indicatifs":payload.status==="not_started"?"● Première collecte en attente":"● Collecteur indisponible";}
+    else {feedState.textContent="● Source de tarifs indisponible";}
     render();
   }).catch(()=>{
     feedState.textContent="● Service des tarifs temporairement indisponible";
