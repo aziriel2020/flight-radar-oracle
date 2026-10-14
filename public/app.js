@@ -91,7 +91,7 @@
       card.append(node("div","deal-date",pretty+" · "+offer.departure_date+" — "+offer.return_date));
       const price=node("div","deal-price");
       const num=new Intl.NumberFormat("fr-BE",{maximumFractionDigits:0}).format(offer.price_eur);
-      price.append(node("span","",num+" €"));price.append(node("small",""," / aller-retour"));card.append(price);
+      price.append(node("span","",num+" €"));price.append(node("small",""," / prix indicatif"));card.append(price);
       card.append(node("div","deal-date",offer.carrier+(offer.verified?" · Vérifié : ":" · Observé : ")+new Date(offer.checked_at).toLocaleTimeString("fr-BE",{hour:"2-digit",minute:"2-digit"})));
       const footer=node("div","deal-footer");
       const score=node("span","deal-score",offer.potential_deal&&offer.saving_pct>0?"Signal −"+offer.saving_pct+" % (observé)":offer.verified?"Prix revérifié":"Prix observé · à confirmer");footer.append(score);
