@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+.env
+secrets.env
+*.log
+.coverage

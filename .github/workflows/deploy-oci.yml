@@ -1,0 +1,36 @@
+name: Deploy to Oracle Cloud (manual)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: flight-radar-oci
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy via verified SSH to existing OCI VM
+        env:
+          OCI_HOST: ${{ secrets.OCI_HOST }}
+          OCI_USER: ${{ secrets.OCI_USER }}
+          OCI_SSH_KEY: ${{ secrets.OCI_SSH_KEY }}
+          OCI_SSH_KNOWN_HOSTS: ${{ secrets.OCI_SSH_KNOWN_HOSTS }}
+        run: |
+          set -Eeuo pipefail
+          for name in OCI_HOST OCI_USER OCI_SSH_KEY OCI_SSH_KNOWN_HOSTS; do
+            if [[ -z "${!name}" ]]; then echo "Missing secret: $name" >&2; exit 1; fi
+          done
+          mkdir -p ~/.ssh; chmod 700 ~/.ssh
+          printf '%s\n' "$OCI_SSH_KEY" > ~/.ssh/id_oci
+          printf '%s\n' "$OCI_SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/id_oci ~/.ssh/known_hosts
+          trap 'rm -f ~/.ssh/id_oci' EXIT
+          SSH="ssh -i ~/.ssh/id_oci -o BatchMode=yes -o StrictHostKeyChecking=yes"
+          $SSH "$OCI_USER@$OCI_HOST" 'sudo apt-get update -qq && sudo DEBIAN_FRONTEND=noninteractive apt-get install -y rsync'
+          $SSH "$OCI_USER@$OCI_HOST" 'mkdir -p ~/flight-radar-release'
+          rsync -az --delete -e "$SSH" --exclude='.git/' --exclude='*.sqlite*' ./ "$OCI_USER@$OCI_HOST:flight-radar-release/"
+          $SSH "$OCI_USER@$OCI_HOST" 'cd ~/flight-radar-release && sudo bash deploy/oci/install.sh'
+          $SSH "$OCI_USER@$OCI_HOST" 'curl --fail --silent --show-error http://127.0.0.1:8080/health'

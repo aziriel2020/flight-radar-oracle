@@ -1,0 +1,2 @@
+# Apply only after a lawful, stable data source is configured.
+# */30 * * * * cd /opt/flight-radar && /opt/flight-radar/.venv/bin/python -m flight_radar --db /var/lib/flight-radar/flight_radar.sqlite --config /etc/flight-radar/config.json scan --source fast-flights --allow-unofficial-collection

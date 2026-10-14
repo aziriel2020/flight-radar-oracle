@@ -1,0 +1,7 @@
+[Unit]
+Description=Flight Radar consistent SQLite backup
+[Service]
+Type=oneshot
+User=flightradar
+Group=flightradar
+ExecStart=/opt/flight-radar/.venv/bin/python /opt/flight-radar/deploy/oci/backup.py

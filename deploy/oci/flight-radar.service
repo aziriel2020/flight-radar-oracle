@@ -1,0 +1,21 @@
+[Unit]
+Description=Flight Radar Oracle monitoring dashboard
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=flightradar
+Group=flightradar
+WorkingDirectory=/opt/flight-radar
+ExecStart=/opt/flight-radar/.venv/bin/python -m flight_radar --db /var/lib/flight-radar/flight_radar.sqlite --config /etc/flight-radar/config.json serve --host 127.0.0.1 --port 8080
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/flight-radar
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

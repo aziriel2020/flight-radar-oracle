@@ -1,3 +1,7 @@
+# Flight Radar Oracle — GitHub build
+
+**Prototype technique non déployé sur Oracle Cloud.** Tests automatisés, collecte JSON et connecteur Google Flights non officiel (opt-in).
+
 # FLIGHT RADAR ORACLE — prototype open source (V0.1)
 
 Un socle exécutable pour suivre les tarifs aériens, construire un historique propre, classer les fortes baisses et diffuser **uniquement les offres vérifiées**. Écrit en Python standard (sauf collecteur optionnel), SQLite et une interface HTTP locale. Pensé pour un petit VPS ARM tel que Oracle Always Free.

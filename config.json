@@ -1,0 +1,41 @@
+{
+  "origins": [
+    "BRU",
+    "CRL",
+    "CDG",
+    "ORY",
+    "AMS",
+    "EIN",
+    "LIL",
+    "DUS"
+  ],
+  "destinations": [
+    "LIS",
+    "OPO",
+    "BCN",
+    "MAD",
+    "FCO",
+    "ATH",
+    "RAK",
+    "JFK",
+    "BKK",
+    "NRT"
+  ],
+  "days_ahead": [
+    28,
+    42,
+    56,
+    84,
+    112
+  ],
+  "stays": [
+    3,
+    5,
+    7,
+    10
+  ],
+  "searches_per_run": 6,
+  "minimum_history_days": 8,
+  "discount_threshold_pct": 25,
+  "minimum_saving_eur": 50
+}
