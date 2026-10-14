@@ -59,7 +59,10 @@ resource "oci_core_security_list" "radar" {
     protocol = "6"
     source = var.ssh_ingress_cidr
     description = "Restricted SSH only"
-    tcp_options { min = 22, max = 22 }
+    tcp_options {
+      min = 22
+      max = 22
+    }
   }
   egress_security_rules {
     protocol = "all"
