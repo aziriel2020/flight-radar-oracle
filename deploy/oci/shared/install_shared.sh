@@ -25,6 +25,19 @@ if ! python3 -c 'import venv' >/dev/null 2>&1; then
   exit 1
 fi
 command -v git >/dev/null || { echo 'ERROR: git unavailable' >&2; exit 1; }
+# Minimal Python bootstrap only if the image lacks pip-enabled virtual environments.
+probe="$(mktemp -d /tmp/flight-radar-venv.XXXXXX)"
+if ! python3 -m venv "$probe/venv" >/dev/null 2>&1; then
+  pyver="$(python3 -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")')"
+  rm -rf "$probe"
+  echo "Installing missing python${pyver}-venv (no Nuvio service restart)."
+  export DEBIAN_FRONTEND=noninteractive
+  sudo -n apt-get update -qq
+  sudo -n apt-get install -y --no-install-recommends "python${pyver}-venv"
+  probe="$(mktemp -d /tmp/flight-radar-venv.XXXXXX)"
+  python3 -m venv "$probe/venv"
+fi
+rm -rf "$probe"
 id flightradar >/dev/null 2>&1 || useradd --system --home-dir /var/lib/flight-radar --shell /usr/sbin/nologin flightradar
 install -d -o root -g root -m 755 /opt/flight-radar /etc/flight-radar
 install -d -o flightradar -g flightradar -m 700 /var/lib/flight-radar /var/lib/flight-radar/data /var/lib/flight-radar/backups
