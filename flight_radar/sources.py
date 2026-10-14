@@ -50,7 +50,7 @@ def fast_flights_search(origin,dest,departure,return_date):
             value = stops_raw.strip().lower()
             if value in ("nonstop", "non-stop", "direct", "0 stops", "0 stop"):
                 stops = 0
-            elif re.match(r"^[1-5]\\s+stops?$", value):
+            elif len(value.split()) == 2 and value.split()[0] in ("1", "2", "3", "4", "5") and value.split()[1] in ("stop", "stops"):
                 stops = int(value[0])
             else:
                 # Do not invent direct flights when stop count is unknown.
