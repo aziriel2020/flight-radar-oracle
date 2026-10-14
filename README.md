@@ -59,10 +59,10 @@ See [Oracle deployment instructions](deploy/oci/README.md). On an existing Ubunt
 git clone https://github.com/aziriel2020/flight-radar-oracle.git
 cd flight-radar-oracle
 sudo bash deploy/oci/install.sh
-curl http://127.0.0.1:8080/health
+curl http://127.0.0.1:18080/health
 ```
 
-The installer keeps the dashboard private on the VM at 127.0.0.1:8080; access it using an SSH tunnel. Never expose it directly as a public commercial site without adding HTTPS, authentication and rate limiting. Systemd runs it on reboot; a timer stores consistent SQLite backups locally for 14 days. Off-machine backups are not configured.
+The installer keeps the dashboard private on the VM at 127.0.0.1:18080; access it using an SSH tunnel. Never expose it directly as a public commercial site without adding HTTPS, authentication and rate limiting. Systemd runs it on reboot; a timer stores consistent SQLite backups locally for 14 days. Off-machine backups are not configured.
 
 GitHub Actions `Deploy to Oracle Cloud (manual)` requires an **existing** VM and four repository secrets: `OCI_HOST`, `OCI_USER`, `OCI_SSH_KEY`, `OCI_SSH_KNOWN_HOSTS`. It does not provision OCI resources or generate credentials.
 
@@ -71,3 +71,5 @@ GitHub Actions `Deploy to Oracle Cloud (manual)` requires an **existing** VM and
 This is a technical MVP, not a bookable flight aggregator. Price completeness, legal access, false positives, capacity, customer support, GDPR compliance, public auth, billing and production monitoring remain unverified or incomplete.
 
 See [Product plan](PLAN_PRODUIT.md) for expansion ideas.
+
+On an OCI VM hosting an existing project, the systemd installation binds to `127.0.0.1:18080`; the standalone dev CLI still defaults to `127.0.0.1:8080`. Do not expose the private dashboard without authentication.
