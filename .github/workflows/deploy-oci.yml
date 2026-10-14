@@ -33,4 +33,4 @@ jobs:
           $SSH "$OCI_USER@$OCI_HOST" 'mkdir -p ~/flight-radar-release'
           rsync -az --delete -e "$SSH" --exclude='.git/' --exclude='*.sqlite*' ./ "$OCI_USER@$OCI_HOST:flight-radar-release/"
           $SSH "$OCI_USER@$OCI_HOST" 'cd ~/flight-radar-release && sudo bash deploy/oci/install.sh'
-          $SSH "$OCI_USER@$OCI_HOST" 'curl --fail --silent --show-error http://127.0.0.1:8080/health'
+          $SSH "$OCI_USER@$OCI_HOST" 'curl --fail --silent --show-error http://127.0.0.1:18080/health'
