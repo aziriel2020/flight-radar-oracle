@@ -86,6 +86,15 @@
     const grid=node("div","deal-grid");
     for(const offer of data){
       const card=node("article","deal"),route=node("div","deal-route");
+      if(/^[A-Z]{3}$/.test(offer.destination)){
+        const art=node("img","deal-image");
+        art.src="/images/destinations/"+offer.destination+".svg";
+        art.alt="Illustration graphique de "+(routeNames[offer.destination]||offer.destination);
+        art.loading="lazy";
+        art.decoding="async";
+        art.onerror=()=>art.remove();
+        card.append(art);
+      }
       route.append(node("span","",offer.origin+" → "+offer.destination));route.append(node("span","","✈"));card.append(route);
       const pretty=routeNames[offer.destination] || offer.destination;
       card.append(node("div","deal-date",pretty+" · "+offer.departure_date+" — "+offer.return_date));
