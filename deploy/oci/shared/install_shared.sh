@@ -56,7 +56,7 @@ for name in history market; do
     install -o flightradar -g flightradar -m 600 "data/$name.json" "/var/lib/flight-radar/data/$name.json"
   fi
 done
-runuser -u flightradar -- /opt/flight-radar/.venv/bin/python -m flight_radar.city_art --output /var/lib/flight-radar/images/destinations
+(cd /opt/flight-radar && runuser -u flightradar -- /opt/flight-radar/.venv/bin/python -m flight_radar.city_art --output /var/lib/flight-radar/images/destinations)
 
 for component in gateway collector backup; do
   install -m 644 "deploy/oci/shared/flight-radar-$component.service" "/etc/systemd/system/flight-radar-$component.service"
