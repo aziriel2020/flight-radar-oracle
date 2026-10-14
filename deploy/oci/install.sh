@@ -2,6 +2,17 @@
 set -Eeuo pipefail
 [[ $EUID == 0 ]] || { echo "Run with sudo" >&2; exit 1; }
 [[ -f flight_radar/__main__.py && -f config.json ]] || { echo "Run from project root" >&2; exit 1; }
+[[ ! -e /etc/systemd/system/flight-radar.service ]] || { echo "Flight Radar already installed; run update.sh instead" >&2; exit 1; }
+# Shared-VM safety: check the private port before touching packages or existing services.
+command -v python3 >/dev/null 2>&1 || { echo "Python 3 required for preflight" >&2; exit 1; }
+python3 - <<'PYPORT'
+import socket
+with socket.socket() as s:
+    try:
+        s.bind(('127.0.0.1', 18080))
+    except OSError:
+        raise SystemExit('Port 18080 already in use: aborting before installation')
+PYPORT
 apt-get update
 DEBIAN_FRONTEND=noninteractive apt-get install -y python3 python3-venv rsync
 id flightradar >/dev/null 2>&1 || useradd --system --home /var/lib/flight-radar --shell /usr/sbin/nologin flightradar
@@ -21,4 +32,4 @@ systemctl enable flight-radar.service flight-radar-backup.timer
 systemctl restart flight-radar.service
 systemctl start flight-radar-backup.timer
 systemctl --no-pager status flight-radar.service | head -20 || true
-echo "Installed. Dashboard binds only to localhost:8080 (SSH tunnel required)."
+echo "Installed. Dashboard binds only to localhost:18080 (SSH tunnel required)."
