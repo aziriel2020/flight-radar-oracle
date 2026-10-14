@@ -5,6 +5,7 @@ function normalized(value) {
   const a = Array.isArray(value) ? value : Array.isArray(value?.offers) ? value.offers : [];
   const now = Date.now();
   return a.filter(o => {
+    if (!o || typeof o !== "object") return false;
     const checked = Date.parse(o.checked_at || o.verified_at || "");
     return o && o.state === "verified" && o.source !== "DEMO_NON_REEL" &&
       typeof o.origin === "string" && /^[A-Z]{3}$/.test(o.origin) &&
