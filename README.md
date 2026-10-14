@@ -15,6 +15,16 @@ An experimental, self-hosted flight-deal monitor built in Python + SQLite, desig
 - JSON import, local-only dashboard, Telegram alerts
 - OCI ARM64 installation, systemd restart, SQLite daily backups, GitHub CI and manual SSH deployment
 
+## Vercel — public web experience (recommended deployment)
+
+The `public/` site and `api/*.mjs` are now Vercel-ready. `vercel.json` uses Framework **Other**, Output Directory **public**. Import **this repository** as a new Vercel project; keep existing Nuvio projects separate.
+
+**Important:** deployment publishes the interactive flight explorer, Google Flights searches and read-only verified-offer API. It does **not** activate a live scanner, persistent SQLite, payments or subscriber alerts. A verified HTTPS deal feed can later be provided via `FLIGHT_RADAR_FEED_URL` (optional `FLIGHT_RADAR_FEED_TOKEN`). Without it, the website truthfully shows that there are no connected live offers.
+
+See **[Vercel deployment and limitations](VERCEL.md)**. Vercel Hobby is personal/non-commercial only; the intended paid-subscription business would need suitable commercial hosting terms.
+
+## Legacy Python collector / Oracle alternative
+
 ## Quick start
 
 Requires Python 3.10+ (Python 3.12 recommended). No paid API is necessary for the synthetic demo or JSON imports.
