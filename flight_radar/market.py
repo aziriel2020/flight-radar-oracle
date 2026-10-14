@@ -46,6 +46,8 @@ def quote_identity(row):
 
 def normalize(o, reference):
     o.validated()
+    if o.source == "DEMO_NON_REEL":
+        raise ValueError("Synthetic demo fares must never enter live collection")
     if not (dt.date.today() < dt.date.fromisoformat(o.departure_date)):
         raise ValueError("Flight already departed")
     # Future-dated sample timestamps may not be published.
