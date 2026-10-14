@@ -1,4 +1,95 @@
 {
-  "schema_version": 1,
-  "observations": []
+  "observations": [
+    {
+      "baggage": "unknown",
+      "cabin": "economy",
+      "carrier": "Air France",
+      "checked_at": "2026-10-14T21:30:27+00:00",
+      "departure_date": "2026-11-22",
+      "destination": "FCO",
+      "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjYtMTEtMjIoAWoFEgNDREdyBRIDRkNPGhwSCjIwMjYtMTEtMjkoAWoFEgNGQ09yBRIDQ0RHQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
+      "origin": "CDG",
+      "price_eur": 233.0,
+      "return_date": "2026-11-29",
+      "source": "fast-flights-unofficial",
+      "state": "observed",
+      "stops": 0
+    },
+    {
+      "baggage": "unknown",
+      "cabin": "economy",
+      "carrier": "ITA",
+      "checked_at": "2026-10-14T21:30:27+00:00",
+      "departure_date": "2026-11-22",
+      "destination": "FCO",
+      "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjYtMTEtMjIoAWoFEgNDREdyBRIDRkNPGhwSCjIwMjYtMTEtMjkoAWoFEgNGQ09yBRIDQ0RHQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
+      "origin": "CDG",
+      "price_eur": 285.0,
+      "return_date": "2026-11-29",
+      "source": "fast-flights-unofficial",
+      "state": "observed",
+      "stops": 0
+    },
+    {
+      "baggage": "unknown",
+      "cabin": "economy",
+      "carrier": "Tap Air Portugal",
+      "checked_at": "2026-10-14T21:30:27+00:00",
+      "departure_date": "2026-11-22",
+      "destination": "JFK",
+      "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjYtMTEtMjIoAWoFEgNBTVNyBRIDSkZLGhwSCjIwMjYtMTEtMjUoAWoFEgNKRktyBRIDQU1TQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
+      "origin": "AMS",
+      "price_eur": 808.0,
+      "return_date": "2026-11-25",
+      "source": "fast-flights-unofficial",
+      "state": "observed",
+      "stops": 1
+    },
+    {
+      "baggage": "unknown",
+      "cabin": "economy",
+      "carrier": "Aer Lingus",
+      "checked_at": "2026-10-14T21:30:27+00:00",
+      "departure_date": "2026-11-22",
+      "destination": "JFK",
+      "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjYtMTEtMjIoAWoFEgNBTVNyBRIDSkZLGhwSCjIwMjYtMTEtMjUoAWoFEgNKRktyBRIDQU1TQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
+      "origin": "AMS",
+      "price_eur": 956.0,
+      "return_date": "2026-11-25",
+      "source": "fast-flights-unofficial",
+      "state": "observed",
+      "stops": 1
+    },
+    {
+      "baggage": "unknown",
+      "cabin": "economy",
+      "carrier": "Delta",
+      "checked_at": "2026-10-14T21:30:27+00:00",
+      "departure_date": "2026-11-22",
+      "destination": "JFK",
+      "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjYtMTEtMjIoAWoFEgNBTVNyBRIDSkZLGhwSCjIwMjYtMTEtMjUoAWoFEgNKRktyBRIDQU1TQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
+      "origin": "AMS",
+      "price_eur": 1361.0,
+      "return_date": "2026-11-25",
+      "source": "fast-flights-unofficial",
+      "state": "observed",
+      "stops": 0
+    },
+    {
+      "baggage": "unknown",
+      "cabin": "economy",
+      "carrier": "KLM",
+      "checked_at": "2026-10-14T21:30:27+00:00",
+      "departure_date": "2026-11-22",
+      "destination": "JFK",
+      "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjYtMTEtMjIoAWoFEgNBTVNyBRIDSkZLGhwSCjIwMjYtMTEtMjUoAWoFEgNKRktyBRIDQU1TQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
+      "origin": "AMS",
+      "price_eur": 1361.0,
+      "return_date": "2026-11-25",
+      "source": "fast-flights-unofficial",
+      "state": "observed",
+      "stops": 0
+    }
+  ],
+  "schema_version": 1
 }
