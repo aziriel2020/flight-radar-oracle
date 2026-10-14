@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "updated_at": null,
+  "status": "not_started",
+  "source": null,
+  "scanned_offers": 0,
+  "errors": [],
+  "history_observations": 0,
+  "offers": [],
+  "disclaimer": "Observed fare prices are indicative and must be checked again before booking."
+}
