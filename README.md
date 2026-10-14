@@ -2,7 +2,7 @@
 
 An experimental, self-hosted flight-deal monitor built in Python + SQLite, designed for Oracle Cloud Always Free Ampere A1.
 
-> **Status:** source code published; GitHub CI included; **not yet deployed to OCI**. No real-time Google Flights collection has been validated. Do not treat synthetic demo data as genuine fares.
+> **État réel (14 octobre 2026) :** site Vercel déployé et vérifié publiquement ; API et stockage d'illustrations installés sur la VM Oracle existante (Nuvio conservé). La collecte non officielle a fonctionné sur GitHub Actions, mais a échoué depuis Oracle. **Le miroir GitHub → Oracle est préparé, non activé à distance.** Aucun tarif n'est garanti réservable.
 
 ## Capabilities
 
@@ -19,7 +19,7 @@ An experimental, self-hosted flight-deal monitor built in Python + SQLite, desig
 
 The `public/` site and `api/*.mjs` are now Vercel-ready. `vercel.json` uses Framework **Other**, Output Directory **public**. Import **this repository** as a new Vercel project; keep existing Nuvio projects separate.
 
-**Important:** deployment publishes the interactive flight explorer, Google Flights searches and read-only verified-offer API. It does **not** activate a live scanner, persistent SQLite, payments or subscriber alerts. A verified HTTPS deal feed can later be provided via `FLIGHT_RADAR_FEED_URL` (optional `FLIGHT_RADAR_FEED_TOKEN`). Without it, the website truthfully shows that there are no connected live offers.
+**Important:** the public `/api/deals` currently reads indicative observed fares produced by a bounded, experimental GitHub Actions collection. Offers are **not booking-verified**; they disappear from the API when stale. There is no payments or subscriber alerts system. You may later connect another authorized HTTPS feed via `FLIGHT_RADAR_FEED_URL` and optional server-side token. See `data/market.json` for the last actual collection status.
 
 See **[Vercel deployment and limitations](VERCEL.md)**. Vercel Hobby is personal/non-commercial only; the intended paid-subscription business would need suitable commercial hosting terms.
 
@@ -59,11 +59,13 @@ python -m pip install -r requirements-optional.txt
 python -m flight_radar scan --source fast-flights --allow-unofficial-collection --limit 2
 ```
 
-It is not guaranteed to work or be allowed for all workloads. It does not bypass anti-bot challenges. **Live price collection is not running automatically.**
+It is not guaranteed to work or be allowed for all workloads. It does not bypass anti-bot challenges. The experimental collector runs on GitHub Actions **three times daily**, currently limited to three searches per cycle; success depends on provider access. The Oracle VM's direct provider queries have returned unparsable content, so do **not** enable aggressive scans there.
 
 ## Oracle Cloud
 
-See [Oracle deployment instructions](deploy/oci/README.md). On an existing Ubuntu ARM VM:
+**Existing shared VM beta:** the isolated local gateway, timers and 18 self-generated destination SVG illustrations are installed on Oracle, with Nuvio still active. Activate the safer GitHub-to-Oracle snapshot mirror per [Oracle shared VM runbook](deploy/oci/SHARED_VM_RUNBOOK.md) after validating the host. The original installer below describes an **alternative standalone dashboard install**, not the already deployed shared-VM setup.
+
+See [Oracle deployment instructions](deploy/oci/README.md). On a new Ubuntu ARM VM:
 
 ```bash
 git clone https://github.com/aziriel2020/flight-radar-oracle.git
