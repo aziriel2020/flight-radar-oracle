@@ -1,0 +1,26 @@
+[Unit]
+Description=Flight Radar isolated Oracle read-only API
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=flightradar
+Group=flightradar
+WorkingDirectory=/opt/flight-radar
+ExecStart=/opt/flight-radar/.venv/bin/python -m flight_radar.oracle_gateway --host 127.0.0.1 --port 18080
+Restart=on-failure
+RestartSec=10s
+MemoryMax=256M
+CPUQuota=20%
+TasksMax=64
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadOnlyPaths=/var/lib/flight-radar
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target
