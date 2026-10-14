@@ -1,5 +1,8 @@
 name: Collect flight prices
 on:
+  push:
+    paths:
+      - 'flight_radar/market.py'
   schedule:
     - cron: '37 5,13,21 * * *'
   workflow_dispatch:
