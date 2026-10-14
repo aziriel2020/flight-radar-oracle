@@ -1,0 +1,14 @@
+[Unit]
+Description=Flight Radar local state backup
+[Service]
+Type=oneshot
+User=flightradar
+Group=flightradar
+ExecStart=/bin/bash /opt/flight-radar/deploy/oci/shared/backup.sh
+Nice=15
+IOSchedulingClass=idle
+MemoryMax=128M
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/flight-radar
