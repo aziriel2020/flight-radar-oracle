@@ -1,0 +1,21 @@
+[Unit]
+Description=Flight Radar safe mirror of public fare snapshots from GitHub
+Wants=network-online.target
+After=network-online.target
+[Service]
+Type=oneshot
+User=flightradar
+Group=flightradar
+WorkingDirectory=/opt/flight-radar
+ExecStart=/opt/flight-radar/.venv/bin/python -m flight_radar.oracle_sync
+TimeoutStartSec=90
+MemoryMax=128M
+CPUQuota=15%
+Nice=15
+IOSchedulingClass=idle
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/flight-radar
+UMask=0077
