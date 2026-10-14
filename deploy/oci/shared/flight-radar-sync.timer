@@ -1,0 +1,10 @@
+[Unit]
+Description=Refresh beta price observations on Oracle every 30 minutes
+[Timer]
+OnBootSec=2m
+OnUnitActiveSec=30m
+RandomizedDelaySec=5m
+Persistent=false
+Unit=flight-radar-sync.service
+[Install]
+WantedBy=timers.target
