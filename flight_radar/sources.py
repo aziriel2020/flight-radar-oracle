@@ -43,5 +43,20 @@ def fast_flights_search(origin,dest,departure,return_date):
         p=getattr(flight,"price",None)
         if p is None:continue
         url="https://www.google.com/travel/flights?q="+quote(f"Flights from {origin} to {dest} on {departure} return {return_date}")
-        output.append(Offer(origin,dest,departure,return_date,price_float(p),str(getattr(flight,"name","Unknown")), "fast-flights-unofficial",int(getattr(flight,"stops",0) or 0),link=url,details="Price and baggage must be reconfirmed").validated())
+        stops_raw = getattr(flight, "stops", None)
+        if isinstance(stops_raw, (int, float)):
+            stops = int(stops_raw)
+        elif isinstance(stops_raw, str):
+            value = stops_raw.strip().lower()
+            if value in ("nonstop", "non-stop", "direct", "0 stops", "0 stop"):
+                stops = 0
+            elif re.match(r"^[1-5]\\s+stops?$", value):
+                stops = int(value[0])
+            else:
+                # Do not invent direct flights when stop count is unknown.
+                continue
+        else:
+            # Some versions omit a structured stop count. Do not guess.
+            continue
+        output.append(Offer(origin,dest,departure,return_date,price_float(p),str(getattr(flight,"name","Unknown")), "fast-flights-unofficial",stops,link=url,details="Indicative third-party observed fare. Verify itinerary, baggages and booking price.").validated())
     return output
