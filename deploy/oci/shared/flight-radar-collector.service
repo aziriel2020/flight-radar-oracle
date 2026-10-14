@@ -1,0 +1,23 @@
+[Unit]
+Description=Flight Radar low-priority fare observation job
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=flightradar
+Group=flightradar
+WorkingDirectory=/opt/flight-radar
+ExecStart=/opt/flight-radar/.venv/bin/python -m flight_radar.market --source fast-flights --allow-unofficial-collection --limit 3 --config /etc/flight-radar/config.json --history /var/lib/flight-radar/data/history.json --feed /var/lib/flight-radar/data/market.json
+TimeoutStartSec=330
+MemoryMax=650M
+CPUQuota=30%
+Nice=15
+IOSchedulingClass=idle
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/flight-radar
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+UMask=0077
