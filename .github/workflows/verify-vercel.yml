@@ -30,6 +30,15 @@ jobs:
           assert d.get('ok') is True, d
           print('Health: OK',d.get('runtime'))
           PY
+      - name: Probe Oracle-generated destination artwork on Vercel
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          curl --fail --location --retry 5 --retry-delay 5 --retry-all-errors --max-time 25 \
+            'https://flight-radar-oracle.vercel.app/images/destinations/FCO.svg' -o /tmp/flight-radar-fco.svg
+          grep -q '<svg' /tmp/flight-radar-fco.svg
+          grep -q 'ROME' /tmp/flight-radar-fco.svg
+          echo "Vercel original destination illustration: OK"
       - name: Probe observed market data
         shell: bash
         run: |
