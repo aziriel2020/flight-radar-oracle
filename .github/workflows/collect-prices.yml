@@ -1,0 +1,65 @@
+name: Collect flight prices
+on:
+  schedule:
+    - cron: '37 5,13,21 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: flight-radar-collection-main
+  cancel-in-progress: false
+jobs:
+  collect:
+    if: github.repository == 'aziriel2020/flight-radar-oracle'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install experimental flight source
+        run: python -m pip install --disable-pip-version-check -r requirements-optional.txt
+      - name: Observe flight fares (not booking verification)
+        id: collect
+        shell: bash
+        run: |
+          set -uo pipefail
+          echo "Experimental source: no proxies, anti-bot bypass or account credentials."
+          if timeout 360s python -m flight_radar.market --source fast-flights --allow-unofficial-collection --limit 3; then
+            echo "result=ok" >> "$GITHUB_OUTPUT"
+          else
+            echo "result=failed" >> "$GITHUB_OUTPUT"
+            echo "::warning::Provider did not return publishable fares; see market.json."
+          fi
+      - name: Commit public, non-sensitive observations
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/history.json data/market.json
+          if ! git diff --staged --quiet; then
+            git commit -m "data: refresh observed fares [skip ci]"
+            git push origin HEAD:main
+          else
+            echo "No change to publish."
+          fi
+      - name: Collector report
+        if: always()
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("data/market.json")
+          if p.exists():
+              d=json.loads(p.read_text())
+              print("Source status:",d.get("status"))
+              print("Quotes parsed:",d.get("scanned_offers"))
+              print("Fresh route offers:",len(d.get("offers",[])))
+              print("Errors:",d.get("errors"))
+          PY
