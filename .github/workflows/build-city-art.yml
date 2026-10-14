@@ -1,0 +1,35 @@
+name: Generate destination assets
+on:
+  push:
+    paths:
+      - '.github/workflows/build-city-art.yml'
+      - 'flight_radar/city_art.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: flight-radar-city-art
+  cancel-in-progress: false
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m flight_radar.city_art --output public/images/destinations
+      - name: Commit locally generated public illustrations
+        run: |
+          set -Eeuo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/images/destinations
+          if git diff --cached --quiet; then
+            echo "Assets already up to date."
+          else
+            git commit -m 'assets: render original destination illustrations [skip ci]'
+            git push origin HEAD:main
+          fi
