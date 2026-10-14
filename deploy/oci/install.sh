@@ -13,7 +13,12 @@ python3 -m venv /opt/flight-radar/.venv
 if [[ ! -f /etc/flight-radar/config.json ]];then install -o root -g flightradar -m 640 config.json /etc/flight-radar/config.json;fi
 (cd /opt/flight-radar && runuser -u flightradar -- /opt/flight-radar/.venv/bin/python -m flight_radar --db /var/lib/flight-radar/flight_radar.sqlite --config /etc/flight-radar/config.json init)
 install -m 644 deploy/oci/flight-radar.service /etc/systemd/system/flight-radar.service
+install -m 644 deploy/oci/flight-radar-backup.service /etc/systemd/system/flight-radar-backup.service
+install -m 644 deploy/oci/flight-radar-backup.timer /etc/systemd/system/flight-radar-backup.timer
+install -d -o flightradar -g flightradar -m 700 /var/lib/flight-radar/backups
 systemctl daemon-reload
-systemctl enable --now flight-radar.service
+systemctl enable flight-radar.service flight-radar-backup.timer
+systemctl restart flight-radar.service
+systemctl start flight-radar-backup.timer
 systemctl --no-pager status flight-radar.service | head -20 || true
 echo "Installed. Dashboard binds only to localhost:8080 (SSH tunnel required)."
