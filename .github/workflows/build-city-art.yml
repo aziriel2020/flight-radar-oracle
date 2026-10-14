@@ -31,5 +31,7 @@ jobs:
             echo "Assets already up to date."
           else
             git commit -m 'assets: render original destination illustrations [skip ci]'
+            git fetch origin main
+            git rebase origin/main
             git push origin HEAD:main
           fi
