@@ -148,6 +148,7 @@ def run(config, source, limit=4, input_file=None, experimental=False,
     old = read_json(history_path, {"observations": []})
     history = old.get("observations", []) if isinstance(old, dict) else []
     results, errors = [], []
+    attempted = 0
     if source == "json":
         if not input_file:
             raise ValueError("--file required for source json")
@@ -162,6 +163,7 @@ def run(config, source, limit=4, input_file=None, experimental=False,
         plan = make_plan(config["origins"], config["destinations"],
                          config["days_ahead"], config["stays"], max(1, min(limit, 12)))
         for origin, destination, departure, returning in plan:
+            attempted += 1
             try:
                 offers = fast_flights_search(origin, destination, departure, returning)
                 for offer in offers:
@@ -184,6 +186,7 @@ def run(config, source, limit=4, input_file=None, experimental=False,
         "status": status,
         "source": source,
         "scanned_offers": len(results),
+        "queries_attempted": attempted,
         "errors": errors[:6],
         "history_observations": len(updated_history),
         "offers": visible,
