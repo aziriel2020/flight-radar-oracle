@@ -46,6 +46,8 @@ cp -a flight_radar requirements-optional.txt /opt/flight-radar/
 python3 -m venv /opt/flight-radar/.venv
 /opt/flight-radar/.venv/bin/python -m pip install --disable-pip-version-check -r /opt/flight-radar/requirements-optional.txt
 chown -R root:root /opt/flight-radar
+# The isolated unprivileged account must traverse the venv; no write access granted.
+chmod -R a+rX /opt/flight-radar/.venv
 if [[ ! -f /etc/flight-radar/config.json ]]; then
   install -o root -g flightradar -m 640 config.json /etc/flight-radar/config.json
 fi
