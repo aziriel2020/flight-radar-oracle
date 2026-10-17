@@ -1,7 +1,9 @@
 {
   "disclaimer": "Indicative observed prices, not guaranteed bookable fares; confirm price and baggage on booking site.",
-  "errors": [],
-  "history_observations": 61,
+  "errors": [
+    "AMS->FCO FlightsNotFound: no flights found; received error"
+  ],
+  "history_observations": 67,
   "offers": [
     {
       "baggage": "unknown",
@@ -29,7 +31,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "Air France / KLM",
-      "checked_at": "2026-10-17T16:38:11+00:00",
+      "checked_at": "2026-10-17T23:22:05+00:00",
       "departure_date": "2026-11-22",
       "destination": "FCO",
       "evidence_days": 2,
@@ -92,7 +94,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "Air France",
-      "checked_at": "2026-10-17T16:38:11+00:00",
+      "checked_at": "2026-10-17T23:22:05+00:00",
       "departure_date": "2026-11-22",
       "destination": "FCO",
       "evidence_days": 4,
@@ -113,7 +115,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "SWISS",
-      "checked_at": "2026-10-17T16:38:11+00:00",
+      "checked_at": "2026-10-17T23:22:05+00:00",
       "departure_date": "2027-01-31",
       "destination": "ATH",
       "evidence_days": 3,
@@ -134,7 +136,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "Austrian",
-      "checked_at": "2026-10-17T16:38:11+00:00",
+      "checked_at": "2026-10-17T23:22:05+00:00",
       "departure_date": "2027-01-31",
       "destination": "ATH",
       "evidence_days": 3,
@@ -176,7 +178,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "Lufthansa",
-      "checked_at": "2026-10-17T16:38:11+00:00",
+      "checked_at": "2026-10-17T23:22:05+00:00",
       "departure_date": "2027-01-31",
       "destination": "ATH",
       "evidence_days": 3,
@@ -197,7 +199,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "KLM",
-      "checked_at": "2026-10-17T16:38:11+00:00",
+      "checked_at": "2026-10-17T23:22:05+00:00",
       "departure_date": "2027-01-31",
       "destination": "ATH",
       "evidence_days": 2,
@@ -215,9 +217,9 @@
     }
   ],
   "queries_attempted": 3,
-  "scanned_offers": 13,
+  "scanned_offers": 9,
   "schema_version": 1,
   "source": "fast-flights",
-  "status": "ok",
-  "updated_at": "2026-10-17T16:38:11+00:00"
+  "status": "partial",
+  "updated_at": "2026-10-17T23:22:05+00:00"
 }
