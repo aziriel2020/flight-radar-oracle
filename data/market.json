@@ -1,7 +1,9 @@
 {
   "disclaimer": "Indicative observed prices, not guaranteed bookable fares; confirm price and baggage on booking site.",
   "errors": [
-    "EIN->NRT TypeError: 'NoneType' object is not subscriptable"
+    "AMS->ATH FlightsNotFound: no flights found; received error",
+    "CDG->FCO FlightsNotFound: no flights found; received error",
+    "AMS->FCO FlightsNotFound: no flights found; received error"
   ],
   "history_observations": 51,
   "offers": [
@@ -133,9 +135,9 @@
     }
   ],
   "queries_attempted": 3,
-  "scanned_offers": 9,
+  "scanned_offers": 0,
   "schema_version": 1,
   "source": "fast-flights",
-  "status": "partial",
-  "updated_at": "2026-10-16T23:50:31+00:00"
+  "status": "error",
+  "updated_at": "2026-10-17T09:38:27+00:00"
 }
