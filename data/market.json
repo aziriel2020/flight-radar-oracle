@@ -1,7 +1,10 @@
 {
   "disclaimer": "Indicative observed prices, not guaranteed bookable fares; confirm price and baggage on booking site.",
-  "errors": [],
-  "history_observations": 127,
+  "errors": [
+    "AMS->ATH FlightsNotFound: no flights found; received error",
+    "EIN->RAK TypeError: 'NoneType' object is not subscriptable"
+  ],
+  "history_observations": 129,
   "offers": [
     {
       "baggage": "unknown",
@@ -50,10 +53,10 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "Air France / KLM",
-      "checked_at": "2026-10-20T18:06:03+00:00",
+      "checked_at": "2026-10-21T00:05:59+00:00",
       "departure_date": "2026-11-22",
       "destination": "FCO",
-      "evidence_days": 5,
+      "evidence_days": 6,
       "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjYtMTEtMjIoAWoFEgNDREdyBRIDRkNPGhwSCjIwMjYtMTEtMjkoAWoFEgNGQ09yBRIDQ0RHQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
       "origin": "CDG",
       "potential_deal": false,
@@ -89,20 +92,20 @@
     },
     {
       "baggage": "unknown",
-      "baseline_eur": null,
+      "baseline_eur": 238.0,
       "cabin": "economy",
       "carrier": "Air France",
-      "checked_at": "2026-10-20T18:06:03+00:00",
+      "checked_at": "2026-10-21T00:05:59+00:00",
       "departure_date": "2026-11-22",
       "destination": "FCO",
-      "evidence_days": 7,
+      "evidence_days": 8,
       "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjYtMTEtMjIoAWoFEgNDREdyBRIDRkNPGhwSCjIwMjYtMTEtMjkoAWoFEgNGQ09yBRIDQ0RHQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
       "origin": "CDG",
       "potential_deal": false,
       "price_eur": 242.0,
       "return_date": "2026-11-29",
-      "saving_eur": null,
-      "saving_pct": null,
+      "saving_eur": -4.0,
+      "saving_pct": -1.7,
       "source": "fast-flights-unofficial",
       "state": "observed",
       "stops": 0,
@@ -173,9 +176,9 @@
     }
   ],
   "queries_attempted": 3,
-  "scanned_offers": 12,
+  "scanned_offers": 5,
   "schema_version": 1,
   "source": "fast-flights",
-  "status": "ok",
-  "updated_at": "2026-10-20T18:06:03+00:00"
+  "status": "partial",
+  "updated_at": "2026-10-21T00:05:59+00:00"
 }
