@@ -1,8 +1,32 @@
 {
   "disclaimer": "Indicative observed prices, not guaranteed bookable fares; confirm price and baggage on booking site.",
-  "errors": [],
-  "history_observations": 242,
+  "errors": [
+    "DUS->BCN FlightsNotFound: no flights found; received error",
+    "CRL->BCN TypeError: 'NoneType' object is not subscriptable"
+  ],
+  "history_observations": 243,
   "offers": [
+    {
+      "baggage": "unknown",
+      "baseline_eur": null,
+      "cabin": "economy",
+      "carrier": "Ryanair",
+      "checked_at": "2026-10-25T10:05:42+00:00",
+      "departure_date": "2027-01-17",
+      "destination": "LIS",
+      "evidence_days": 1,
+      "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMTcoAWoFEgNDUkxyBRIDTElTGhwSCjIwMjctMDEtMjAoAWoFEgNMSVNyBRIDQ1JMQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
+      "origin": "CRL",
+      "potential_deal": false,
+      "price_eur": 101.0,
+      "return_date": "2027-01-20",
+      "saving_eur": null,
+      "saving_pct": null,
+      "source": "fast-flights-unofficial",
+      "state": "observed",
+      "stops": 0,
+      "verified": false
+    },
     {
       "baggage": "unknown",
       "baseline_eur": null,
@@ -236,9 +260,9 @@
     }
   ],
   "queries_attempted": 3,
-  "scanned_offers": 14,
+  "scanned_offers": 2,
   "schema_version": 1,
   "source": "fast-flights",
-  "status": "ok",
-  "updated_at": "2026-10-24T23:39:09+00:00"
+  "status": "partial",
+  "updated_at": "2026-10-25T10:05:42+00:00"
 }
