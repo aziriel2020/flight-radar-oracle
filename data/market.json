@@ -3,14 +3,14 @@
   "errors": [
     "CRL->BCN TypeError: 'NoneType' object is not subscriptable"
   ],
-  "history_observations": 270,
+  "history_observations": 275,
   "offers": [
     {
       "baggage": "unknown",
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "Air France",
-      "checked_at": "2026-10-27T10:54:27+00:00",
+      "checked_at": "2026-10-27T18:54:48+00:00",
       "departure_date": "2026-12-06",
       "destination": "BCN",
       "evidence_days": 3,
@@ -31,14 +31,14 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "KLM",
-      "checked_at": "2026-10-27T10:54:27+00:00",
+      "checked_at": "2026-10-27T18:54:48+00:00",
       "departure_date": "2026-12-06",
       "destination": "BCN",
       "evidence_days": 3,
       "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjYtMTItMDYoAWoFEgNEVVNyBRIDQkNOGhwSCjIwMjYtMTItMTMoAWoFEgNCQ05yBRIDRFVTQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
       "origin": "DUS",
       "potential_deal": false,
-      "price_eur": 176.0,
+      "price_eur": 178.0,
       "return_date": "2026-12-13",
       "saving_eur": null,
       "saving_pct": null,
@@ -52,7 +52,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "Brussels Airlines / SWISS",
-      "checked_at": "2026-10-27T10:54:27+00:00",
+      "checked_at": "2026-10-27T18:54:48+00:00",
       "departure_date": "2026-12-20",
       "destination": "BCN",
       "evidence_days": 1,
@@ -73,7 +73,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "Vueling",
-      "checked_at": "2026-10-27T10:54:27+00:00",
+      "checked_at": "2026-10-27T18:54:48+00:00",
       "departure_date": "2026-12-20",
       "destination": "BCN",
       "evidence_days": 1,
@@ -94,7 +94,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "KLM",
-      "checked_at": "2026-10-27T10:54:27+00:00",
+      "checked_at": "2026-10-27T18:54:48+00:00",
       "departure_date": "2026-12-20",
       "destination": "BCN",
       "evidence_days": 1,
@@ -116,5 +116,5 @@
   "schema_version": 1,
   "source": "fast-flights",
   "status": "partial",
-  "updated_at": "2026-10-27T10:54:27+00:00"
+  "updated_at": "2026-10-27T18:54:48+00:00"
 }
