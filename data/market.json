@@ -1,19 +1,20 @@
 {
   "disclaimer": "Indicative observed prices, not guaranteed bookable fares; confirm price and baggage on booking site.",
   "errors": [
-    "CRL->BCN TypeError: 'NoneType' object is not subscriptable"
+    "CRL->BCN TypeError: 'NoneType' object is not subscriptable",
+    "LIL->BKK IndexError: list index out of range"
   ],
-  "history_observations": 275,
+  "history_observations": 277,
   "offers": [
     {
       "baggage": "unknown",
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "Air France",
-      "checked_at": "2026-10-27T18:54:48+00:00",
+      "checked_at": "2026-10-28T00:42:40+00:00",
       "departure_date": "2026-12-06",
       "destination": "BCN",
-      "evidence_days": 3,
+      "evidence_days": 4,
       "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjYtMTItMDYoAWoFEgNEVVNyBRIDQkNOGhwSCjIwMjYtMTItMTMoAWoFEgNCQ05yBRIDRFVTQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
       "origin": "DUS",
       "potential_deal": false,
@@ -31,10 +32,10 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "KLM",
-      "checked_at": "2026-10-27T18:54:48+00:00",
+      "checked_at": "2026-10-28T00:42:40+00:00",
       "departure_date": "2026-12-06",
       "destination": "BCN",
-      "evidence_days": 3,
+      "evidence_days": 4,
       "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjYtMTItMDYoAWoFEgNEVVNyBRIDQkNOGhwSCjIwMjYtMTItMTMoAWoFEgNCQ05yBRIDRFVTQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
       "origin": "DUS",
       "potential_deal": false,
@@ -112,9 +113,9 @@
     }
   ],
   "queries_attempted": 3,
-  "scanned_offers": 9,
+  "scanned_offers": 5,
   "schema_version": 1,
   "source": "fast-flights",
   "status": "partial",
-  "updated_at": "2026-10-27T18:54:48+00:00"
+  "updated_at": "2026-10-28T00:42:40+00:00"
 }
