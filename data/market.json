@@ -1,17 +1,17 @@
 {
   "disclaimer": "Indicative observed prices, not guaranteed bookable fares; confirm price and baggage on booking site.",
   "errors": [
-    "CRL->BCN FlightsNotFound: no flights found; received error",
+    "CRL->BCN TypeError: 'NoneType' object is not subscriptable",
     "LIL->BKK IndexError: list index out of range"
   ],
-  "history_observations": 279,
+  "history_observations": 281,
   "offers": [
     {
       "baggage": "unknown",
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "Air France",
-      "checked_at": "2026-10-28T11:35:05+00:00",
+      "checked_at": "2026-10-28T19:04:03+00:00",
       "departure_date": "2026-12-06",
       "destination": "BCN",
       "evidence_days": 4,
@@ -32,7 +32,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "KLM",
-      "checked_at": "2026-10-28T11:35:05+00:00",
+      "checked_at": "2026-10-28T19:04:03+00:00",
       "departure_date": "2026-12-06",
       "destination": "BCN",
       "evidence_days": 4,
@@ -54,5 +54,5 @@
   "schema_version": 1,
   "source": "fast-flights",
   "status": "partial",
-  "updated_at": "2026-10-28T11:35:05+00:00"
+  "updated_at": "2026-10-28T19:04:03+00:00"
 }
