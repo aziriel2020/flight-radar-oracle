@@ -3,14 +3,14 @@
   "errors": [
     "CRL->BCN TypeError: 'NoneType' object is not subscriptable"
   ],
-  "history_observations": 287,
+  "history_observations": 290,
   "offers": [
     {
       "baggage": "unknown",
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "Air France",
-      "checked_at": "2026-10-29T11:42:48+00:00",
+      "checked_at": "2026-10-29T19:11:04+00:00",
       "departure_date": "2026-12-06",
       "destination": "BCN",
       "evidence_days": 5,
@@ -31,7 +31,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "KLM",
-      "checked_at": "2026-10-29T11:42:48+00:00",
+      "checked_at": "2026-10-29T19:11:04+00:00",
       "departure_date": "2026-12-06",
       "destination": "BCN",
       "evidence_days": 5,
@@ -52,7 +52,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "KLM",
-      "checked_at": "2026-10-29T11:42:48+00:00",
+      "checked_at": "2026-10-29T19:11:04+00:00",
       "departure_date": "2026-12-20",
       "destination": "BCN",
       "evidence_days": 1,
@@ -74,5 +74,5 @@
   "schema_version": 1,
   "source": "fast-flights",
   "status": "partial",
-  "updated_at": "2026-10-29T11:42:48+00:00"
+  "updated_at": "2026-10-29T19:11:04+00:00"
 }
