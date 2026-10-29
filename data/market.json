@@ -1,20 +1,19 @@
 {
   "disclaimer": "Indicative observed prices, not guaranteed bookable fares; confirm price and baggage on booking site.",
   "errors": [
-    "CRL->BCN TypeError: 'NoneType' object is not subscriptable",
-    "LIL->BKK IndexError: list index out of range"
+    "CRL->BCN TypeError: 'NoneType' object is not subscriptable"
   ],
-  "history_observations": 281,
+  "history_observations": 284,
   "offers": [
     {
       "baggage": "unknown",
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "Air France",
-      "checked_at": "2026-10-28T19:04:03+00:00",
+      "checked_at": "2026-10-29T01:11:56+00:00",
       "departure_date": "2026-12-06",
       "destination": "BCN",
-      "evidence_days": 4,
+      "evidence_days": 5,
       "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjYtMTItMDYoAWoFEgNEVVNyBRIDQkNOGhwSCjIwMjYtMTItMTMoAWoFEgNCQ05yBRIDRFVTQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
       "origin": "DUS",
       "potential_deal": false,
@@ -32,15 +31,36 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "KLM",
-      "checked_at": "2026-10-28T19:04:03+00:00",
+      "checked_at": "2026-10-29T01:11:56+00:00",
       "departure_date": "2026-12-06",
       "destination": "BCN",
-      "evidence_days": 4,
+      "evidence_days": 5,
       "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjYtMTItMDYoAWoFEgNEVVNyBRIDQkNOGhwSCjIwMjYtMTItMTMoAWoFEgNCQ05yBRIDRFVTQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
       "origin": "DUS",
       "potential_deal": false,
-      "price_eur": 178.0,
+      "price_eur": 176.0,
       "return_date": "2026-12-13",
+      "saving_eur": null,
+      "saving_pct": null,
+      "source": "fast-flights-unofficial",
+      "state": "observed",
+      "stops": 1,
+      "verified": false
+    },
+    {
+      "baggage": "unknown",
+      "baseline_eur": null,
+      "cabin": "economy",
+      "carrier": "KLM",
+      "checked_at": "2026-10-29T01:11:56+00:00",
+      "departure_date": "2026-12-20",
+      "destination": "BCN",
+      "evidence_days": 1,
+      "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjYtMTItMjAoAWoFEgNFSU5yBRIDQkNOGhwSCjIwMjYtMTItMjcoAWoFEgNCQ05yBRIDRUlOQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
+      "origin": "EIN",
+      "potential_deal": false,
+      "price_eur": 323.0,
+      "return_date": "2026-12-27",
       "saving_eur": null,
       "saving_pct": null,
       "source": "fast-flights-unofficial",
@@ -50,9 +70,9 @@
     }
   ],
   "queries_attempted": 3,
-  "scanned_offers": 5,
+  "scanned_offers": 9,
   "schema_version": 1,
   "source": "fast-flights",
   "status": "partial",
-  "updated_at": "2026-10-28T19:04:03+00:00"
+  "updated_at": "2026-10-29T01:11:56+00:00"
 }
