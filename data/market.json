@@ -3,14 +3,14 @@
   "errors": [
     "CRL->BCN TypeError: 'NoneType' object is not subscriptable"
   ],
-  "history_observations": 296,
+  "history_observations": 299,
   "offers": [
     {
       "baggage": "unknown",
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "Ryanair",
-      "checked_at": "2026-10-30T11:35:10+00:00",
+      "checked_at": "2026-10-30T18:48:38+00:00",
       "departure_date": "2026-11-22",
       "destination": "OPO",
       "evidence_days": 1,
@@ -31,7 +31,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "Air France",
-      "checked_at": "2026-10-30T11:35:10+00:00",
+      "checked_at": "2026-10-30T18:48:38+00:00",
       "departure_date": "2026-12-06",
       "destination": "BCN",
       "evidence_days": 6,
@@ -52,7 +52,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "KLM",
-      "checked_at": "2026-10-30T11:35:10+00:00",
+      "checked_at": "2026-10-30T18:48:38+00:00",
       "departure_date": "2026-12-06",
       "destination": "BCN",
       "evidence_days": 6,
@@ -74,5 +74,5 @@
   "schema_version": 1,
   "source": "fast-flights",
   "status": "partial",
-  "updated_at": "2026-10-30T11:35:10+00:00"
+  "updated_at": "2026-10-30T18:48:38+00:00"
 }
