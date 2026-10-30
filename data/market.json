@@ -1,23 +1,23 @@
 {
   "disclaimer": "Indicative observed prices, not guaranteed bookable fares; confirm price and baggage on booking site.",
   "errors": [
-    "CRL->BCN FlightsNotFound: no flights found; received error"
+    "CRL->BCN TypeError: 'NoneType' object is not subscriptable"
   ],
-  "history_observations": 293,
+  "history_observations": 296,
   "offers": [
     {
       "baggage": "unknown",
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "Ryanair",
-      "checked_at": "2026-10-30T01:19:33+00:00",
+      "checked_at": "2026-10-30T11:35:10+00:00",
       "departure_date": "2026-11-22",
       "destination": "OPO",
       "evidence_days": 1,
       "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjYtMTEtMjIoAWoFEgNMSUxyBRIDT1BPGhwSCjIwMjYtMTEtMjkoAWoFEgNPUE9yBRIDTElMQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
       "origin": "LIL",
       "potential_deal": false,
-      "price_eur": 126.0,
+      "price_eur": 119.0,
       "return_date": "2026-11-29",
       "saving_eur": null,
       "saving_pct": null,
@@ -31,7 +31,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "Air France",
-      "checked_at": "2026-10-30T01:19:33+00:00",
+      "checked_at": "2026-10-30T11:35:10+00:00",
       "departure_date": "2026-12-06",
       "destination": "BCN",
       "evidence_days": 6,
@@ -52,7 +52,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "KLM",
-      "checked_at": "2026-10-30T01:19:33+00:00",
+      "checked_at": "2026-10-30T11:35:10+00:00",
       "departure_date": "2026-12-06",
       "destination": "BCN",
       "evidence_days": 6,
@@ -61,27 +61,6 @@
       "potential_deal": false,
       "price_eur": 176.0,
       "return_date": "2026-12-13",
-      "saving_eur": null,
-      "saving_pct": null,
-      "source": "fast-flights-unofficial",
-      "state": "observed",
-      "stops": 1,
-      "verified": false
-    },
-    {
-      "baggage": "unknown",
-      "baseline_eur": null,
-      "cabin": "economy",
-      "carrier": "KLM",
-      "checked_at": "2026-10-29T19:11:04+00:00",
-      "departure_date": "2026-12-20",
-      "destination": "BCN",
-      "evidence_days": 1,
-      "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjYtMTItMjAoAWoFEgNFSU5yBRIDQkNOGhwSCjIwMjYtMTItMjcoAWoFEgNCQ05yBRIDRUlOQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
-      "origin": "EIN",
-      "potential_deal": false,
-      "price_eur": 323.0,
-      "return_date": "2026-12-27",
       "saving_eur": null,
       "saving_pct": null,
       "source": "fast-flights-unofficial",
@@ -95,5 +74,5 @@
   "schema_version": 1,
   "source": "fast-flights",
   "status": "partial",
-  "updated_at": "2026-10-30T01:19:33+00:00"
+  "updated_at": "2026-10-30T11:35:10+00:00"
 }
