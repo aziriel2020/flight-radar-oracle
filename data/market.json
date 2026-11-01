@@ -1,7 +1,9 @@
 {
   "disclaimer": "Indicative observed prices, not guaranteed bookable fares; confirm price and baggage on booking site.",
   "errors": [
-    "CRL->BCN TypeError: 'NoneType' object is not subscriptable"
+    "DUS->BCN FlightsNotFound: no flights found; received error",
+    "CRL->BCN TypeError: 'NoneType' object is not subscriptable",
+    "EIN->BKK FlightsNotFound: no flights found; received error"
   ],
   "history_observations": 323,
   "offers": [
@@ -70,9 +72,9 @@
     }
   ],
   "queries_attempted": 3,
-  "scanned_offers": 7,
+  "scanned_offers": 0,
   "schema_version": 1,
   "source": "fast-flights",
-  "status": "partial",
-  "updated_at": "2026-11-01T11:59:53+00:00"
+  "status": "error",
+  "updated_at": "2026-11-01T18:31:31+00:00"
 }
