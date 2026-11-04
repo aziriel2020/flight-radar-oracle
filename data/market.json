@@ -1,18 +1,16 @@
 {
   "disclaimer": "Indicative observed prices, not guaranteed bookable fares; confirm price and baggage on booking site.",
   "errors": [
-    "DUS->BCN FlightsNotFound: no flights found; received error",
-    "CRL->BCN FlightsNotFound: no flights found; received error",
-    "CDG->JFK FlightsNotFound: no flights found; received error"
+    "CRL->BCN TypeError: 'NoneType' object is not subscriptable"
   ],
-  "history_observations": 354,
+  "history_observations": 360,
   "offers": [
     {
       "baggage": "unknown",
       "baseline_eur": 176.0,
       "cabin": "economy",
       "carrier": "Air France",
-      "checked_at": "2026-11-04T01:37:49+00:00",
+      "checked_at": "2026-11-04T20:31:03+00:00",
       "departure_date": "2026-12-06",
       "destination": "BCN",
       "evidence_days": 11,
@@ -33,7 +31,7 @@
       "baseline_eur": 176.0,
       "cabin": "economy",
       "carrier": "KLM",
-      "checked_at": "2026-11-04T01:37:49+00:00",
+      "checked_at": "2026-11-04T20:31:03+00:00",
       "departure_date": "2026-12-06",
       "destination": "BCN",
       "evidence_days": 11,
@@ -54,7 +52,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "JetBlue",
-      "checked_at": "2026-11-04T01:37:49+00:00",
+      "checked_at": "2026-11-04T20:31:03+00:00",
       "departure_date": "2027-02-14",
       "destination": "JFK",
       "evidence_days": 1,
@@ -75,14 +73,14 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "Aer Lingus",
-      "checked_at": "2026-11-04T01:37:49+00:00",
+      "checked_at": "2026-11-04T20:31:03+00:00",
       "departure_date": "2027-02-14",
       "destination": "JFK",
       "evidence_days": 1,
       "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMTQoAWoFEgNDREdyBRIDSkZLGhwSCjIwMjctMDItMTcoAWoFEgNKRktyBRIDQ0RHQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
       "origin": "CDG",
       "potential_deal": false,
-      "price_eur": 653.0,
+      "price_eur": 652.0,
       "return_date": "2027-02-17",
       "saving_eur": null,
       "saving_pct": null,
@@ -96,7 +94,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "British Airways",
-      "checked_at": "2026-11-04T01:37:49+00:00",
+      "checked_at": "2026-11-04T20:31:03+00:00",
       "departure_date": "2027-02-14",
       "destination": "JFK",
       "evidence_days": 1,
@@ -117,7 +115,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "British Airways / American",
-      "checked_at": "2026-11-04T01:37:49+00:00",
+      "checked_at": "2026-11-04T20:31:03+00:00",
       "departure_date": "2027-02-14",
       "destination": "JFK",
       "evidence_days": 1,
@@ -135,9 +133,9 @@
     }
   ],
   "queries_attempted": 3,
-  "scanned_offers": 0,
+  "scanned_offers": 10,
   "schema_version": 1,
   "source": "fast-flights",
-  "status": "error",
-  "updated_at": "2026-11-04T13:14:22+00:00"
+  "status": "partial",
+  "updated_at": "2026-11-04T20:31:03+00:00"
 }
