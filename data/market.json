@@ -1,7 +1,9 @@
 {
   "disclaimer": "Indicative observed prices, not guaranteed bookable fares; confirm price and baggage on booking site.",
   "errors": [
-    "CRL->BCN TypeError: 'NoneType' object is not subscriptable"
+    "DUS->BCN FlightsNotFound: no flights found; received error",
+    "CRL->BCN FlightsNotFound: no flights found; received error",
+    "CDG->JFK FlightsNotFound: no flights found; received error"
   ],
   "history_observations": 354,
   "offers": [
@@ -42,69 +44,6 @@
       "return_date": "2026-12-13",
       "saving_eur": 0.0,
       "saving_pct": 0.0,
-      "source": "fast-flights-unofficial",
-      "state": "observed",
-      "stops": 1,
-      "verified": false
-    },
-    {
-      "baggage": "unknown",
-      "baseline_eur": null,
-      "cabin": "economy",
-      "carrier": "Air France",
-      "checked_at": "2026-11-03T20:16:26+00:00",
-      "departure_date": "2027-01-17",
-      "destination": "FCO",
-      "evidence_days": 1,
-      "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMTcoAWoFEgNEVVNyBRIDRkNPGhwSCjIwMjctMDEtMjAoAWoFEgNGQ09yBRIDRFVTQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
-      "origin": "DUS",
-      "potential_deal": false,
-      "price_eur": 184.0,
-      "return_date": "2027-01-20",
-      "saving_eur": null,
-      "saving_pct": null,
-      "source": "fast-flights-unofficial",
-      "state": "observed",
-      "stops": 1,
-      "verified": false
-    },
-    {
-      "baggage": "unknown",
-      "baseline_eur": null,
-      "cabin": "economy",
-      "carrier": "KLM",
-      "checked_at": "2026-11-03T20:16:26+00:00",
-      "departure_date": "2027-01-17",
-      "destination": "FCO",
-      "evidence_days": 1,
-      "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMTcoAWoFEgNEVVNyBRIDRkNPGhwSCjIwMjctMDEtMjAoAWoFEgNGQ09yBRIDRFVTQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
-      "origin": "DUS",
-      "potential_deal": false,
-      "price_eur": 184.0,
-      "return_date": "2027-01-20",
-      "saving_eur": null,
-      "saving_pct": null,
-      "source": "fast-flights-unofficial",
-      "state": "observed",
-      "stops": 1,
-      "verified": false
-    },
-    {
-      "baggage": "unknown",
-      "baseline_eur": null,
-      "cabin": "economy",
-      "carrier": "Air Serbia",
-      "checked_at": "2026-11-03T20:16:26+00:00",
-      "departure_date": "2027-01-17",
-      "destination": "FCO",
-      "evidence_days": 1,
-      "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDEtMTcoAWoFEgNEVVNyBRIDRkNPGhwSCjIwMjctMDEtMjAoAWoFEgNGQ09yBRIDRFVTQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
-      "origin": "DUS",
-      "potential_deal": false,
-      "price_eur": 185.0,
-      "return_date": "2027-01-20",
-      "saving_eur": null,
-      "saving_pct": null,
       "source": "fast-flights-unofficial",
       "state": "observed",
       "stops": 1,
@@ -196,9 +135,9 @@
     }
   ],
   "queries_attempted": 3,
-  "scanned_offers": 10,
+  "scanned_offers": 0,
   "schema_version": 1,
   "source": "fast-flights",
-  "status": "partial",
-  "updated_at": "2026-11-04T01:37:49+00:00"
+  "status": "error",
+  "updated_at": "2026-11-04T13:14:22+00:00"
 }
