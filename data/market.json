@@ -1,9 +1,10 @@
 {
   "disclaimer": "Indicative observed prices, not guaranteed bookable fares; confirm price and baggage on booking site.",
   "errors": [
-    "CRL->BCN FlightsNotFound: no flights found; received error"
+    "DUS->BCN FlightsNotFound: no flights found; received error",
+    "CRL->BCN TypeError: 'NoneType' object is not subscriptable"
   ],
-  "history_observations": 388,
+  "history_observations": 391,
   "offers": [
     {
       "baggage": "unknown",
@@ -52,7 +53,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "Tap Air Portugal",
-      "checked_at": "2026-11-06T13:12:00+00:00",
+      "checked_at": "2026-11-06T20:03:50+00:00",
       "departure_date": "2026-12-06",
       "destination": "LIS",
       "evidence_days": 1,
@@ -73,7 +74,7 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "KLM",
-      "checked_at": "2026-11-06T13:12:00+00:00",
+      "checked_at": "2026-11-06T20:03:50+00:00",
       "departure_date": "2026-12-06",
       "destination": "LIS",
       "evidence_days": 1,
@@ -115,14 +116,14 @@
       "baseline_eur": null,
       "cabin": "economy",
       "carrier": "Lufthansa",
-      "checked_at": "2026-11-06T13:12:00+00:00",
+      "checked_at": "2026-11-06T20:03:50+00:00",
       "departure_date": "2026-12-06",
       "destination": "LIS",
       "evidence_days": 1,
       "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjYtMTItMDYoAWoFEgNBTVNyBRIDTElTGhwSCjIwMjYtMTItMTEoAWoFEgNMSVNyBRIDQU1TQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
       "origin": "AMS",
       "potential_deal": false,
-      "price_eur": 237.0,
+      "price_eur": 214.0,
       "return_date": "2026-12-11",
       "saving_eur": null,
       "saving_pct": null,
@@ -133,9 +134,9 @@
     }
   ],
   "queries_attempted": 3,
-  "scanned_offers": 10,
+  "scanned_offers": 5,
   "schema_version": 1,
   "source": "fast-flights",
   "status": "partial",
-  "updated_at": "2026-11-06T13:12:00+00:00"
+  "updated_at": "2026-11-06T20:03:50+00:00"
 }
