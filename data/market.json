@@ -1,6 +1,10 @@
 {
   "disclaimer": "Indicative observed prices, not guaranteed bookable fares; confirm price and baggage on booking site.",
-  "errors": [],
+  "errors": [
+    "BRU->MAD FlightsNotFound: no flights found; received error",
+    "CDG->MAD FlightsNotFound: no flights found; received error",
+    "DUS->BCN FlightsNotFound: no flights found; received error"
+  ],
   "history_observations": 401,
   "offers": [
     {
@@ -110,9 +114,9 @@
     }
   ],
   "queries_attempted": 3,
-  "scanned_offers": 12,
+  "scanned_offers": 0,
   "schema_version": 1,
   "source": "fast-flights",
-  "status": "ok",
-  "updated_at": "2026-11-08T18:28:26+00:00"
+  "status": "error",
+  "updated_at": "2026-11-09T01:10:50+00:00"
 }
