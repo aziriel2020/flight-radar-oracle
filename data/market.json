@@ -1,10 +1,53 @@
 {
   "disclaimer": "Indicative observed prices, not guaranteed bookable fares; confirm price and baggage on booking site.",
   "errors": [
-    "CDG->MAD FlightsNotFound: no flights found; received error"
+    "BRU->MAD FlightsNotFound: no flights found; received error",
+    "DUS->FCO FlightsNotFound: no flights found; received error"
   ],
-  "history_observations": 416,
+  "history_observations": 419,
   "offers": [
+    {
+      "baggage": "unknown",
+      "baseline_eur": null,
+      "cabin": "economy",
+      "carrier": "Iberia",
+      "checked_at": "2026-11-10T13:44:13+00:00",
+      "departure_date": "2027-02-28",
+      "destination": "MAD",
+      "evidence_days": 3,
+      "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMjgoAWoFEgNDREdyBRIDTUFEGhwSCjIwMjctMDMtMDMoAWoFEgNNQURyBRIDQ0RHQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
+      "origin": "CDG",
+      "potential_deal": false,
+      "price_eur": 149.0,
+      "return_date": "2027-03-03",
+      "saving_eur": null,
+      "saving_pct": null,
+      "source": "fast-flights-unofficial",
+      "state": "observed",
+      "stops": 0,
+      "verified": false
+    },
+    {
+      "baggage": "unknown",
+      "baseline_eur": null,
+      "cabin": "economy",
+      "carrier": "Air France",
+      "checked_at": "2026-11-10T13:44:13+00:00",
+      "departure_date": "2027-02-28",
+      "destination": "MAD",
+      "evidence_days": 3,
+      "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMjgoAWoFEgNDREdyBRIDTUFEGhwSCjIwMjctMDMtMDMoAWoFEgNNQURyBRIDQ0RHQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
+      "origin": "CDG",
+      "potential_deal": false,
+      "price_eur": 157.0,
+      "return_date": "2027-03-03",
+      "saving_eur": null,
+      "saving_pct": null,
+      "source": "fast-flights-unofficial",
+      "state": "observed",
+      "stops": 0,
+      "verified": false
+    },
     {
       "baggage": "unknown",
       "baseline_eur": null,
@@ -40,6 +83,27 @@
       "potential_deal": false,
       "price_eur": 185.0,
       "return_date": "2027-03-10",
+      "saving_eur": null,
+      "saving_pct": null,
+      "source": "fast-flights-unofficial",
+      "state": "observed",
+      "stops": 1,
+      "verified": false
+    },
+    {
+      "baggage": "unknown",
+      "baseline_eur": null,
+      "cabin": "economy",
+      "carrier": "SWISS",
+      "checked_at": "2026-11-10T13:44:13+00:00",
+      "departure_date": "2027-02-28",
+      "destination": "MAD",
+      "evidence_days": 2,
+      "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMjgoAWoFEgNDREdyBRIDTUFEGhwSCjIwMjctMDMtMDMoAWoFEgNNQURyBRIDQ0RHQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
+      "origin": "CDG",
+      "potential_deal": false,
+      "price_eur": 185.0,
+      "return_date": "2027-03-03",
       "saving_eur": null,
       "saving_pct": null,
       "source": "fast-flights-unofficial",
@@ -133,9 +197,9 @@
     }
   ],
   "queries_attempted": 3,
-  "scanned_offers": 10,
+  "scanned_offers": 5,
   "schema_version": 1,
   "source": "fast-flights",
   "status": "partial",
-  "updated_at": "2026-11-10T03:46:34+00:00"
+  "updated_at": "2026-11-10T13:44:13+00:00"
 }
