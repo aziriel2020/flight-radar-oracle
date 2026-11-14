@@ -1,6 +1,10 @@
 {
   "disclaimer": "Indicative observed prices, not guaranteed bookable fares; confirm price and baggage on booking site.",
-  "errors": [],
+  "errors": [
+    "BRU->MAD FlightsNotFound: no flights found; received error",
+    "CDG->MAD FlightsNotFound: no flights found; received error",
+    "EIN->JFK FlightsNotFound: no flights found; received error"
+  ],
   "history_observations": 475,
   "offers": [
     {
@@ -133,27 +137,6 @@
       "baggage": "unknown",
       "baseline_eur": null,
       "cabin": "economy",
-      "carrier": "Etihad",
-      "checked_at": "2026-11-13T13:23:41+00:00",
-      "departure_date": "2026-12-20",
-      "destination": "BKK",
-      "evidence_days": 1,
-      "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjYtMTItMjAoAWoFEgNBTVNyBRIDQktLGhwSCjIwMjYtMTItMzAoAWoFEgNCS0tyBRIDQU1TQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
-      "origin": "AMS",
-      "potential_deal": false,
-      "price_eur": 1324.0,
-      "return_date": "2026-12-30",
-      "saving_eur": null,
-      "saving_pct": null,
-      "source": "fast-flights-unofficial",
-      "state": "observed",
-      "stops": 1,
-      "verified": false
-    },
-    {
-      "baggage": "unknown",
-      "baseline_eur": null,
-      "cabin": "economy",
       "carrier": "Etihad / Condor",
       "checked_at": "2026-11-13T20:38:25+00:00",
       "departure_date": "2026-12-20",
@@ -215,9 +198,9 @@
     }
   ],
   "queries_attempted": 3,
-  "scanned_offers": 15,
+  "scanned_offers": 0,
   "schema_version": 1,
   "source": "fast-flights",
-  "status": "ok",
-  "updated_at": "2026-11-13T20:38:25+00:00"
+  "status": "error",
+  "updated_at": "2026-11-14T01:42:27+00:00"
 }
