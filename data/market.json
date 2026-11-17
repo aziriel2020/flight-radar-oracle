@@ -2,15 +2,36 @@
   "disclaimer": "Indicative observed prices, not guaranteed bookable fares; confirm price and baggage on booking site.",
   "errors": [
     "BRU->MAD FlightsNotFound: no flights found; received error",
-    "CDG->MAD FlightsNotFound: no flights found; received error",
-    "CRL->RAK FlightsNotFound: no flights found; received error"
+    "CDG->MAD FlightsNotFound: no flights found; received error"
   ],
-  "history_observations": 505,
-  "offers": [],
+  "history_observations": 506,
+  "offers": [
+    {
+      "baggage": "unknown",
+      "baseline_eur": null,
+      "cabin": "economy",
+      "carrier": "Ryanair",
+      "checked_at": "2026-11-17T14:51:05+00:00",
+      "departure_date": "2027-02-28",
+      "destination": "RAK",
+      "evidence_days": 1,
+      "link": "https://www.google.com/travel/flights/search?tfs=GhwSCjIwMjctMDItMjgoAWoFEgNDUkxyBRIDUkFLGhwSCjIwMjctMDMtMDcoAWoFEgNSQUtyBRIDQ1JMQgEBSAGIAQGYAQE=&hl=en-US&curr=EUR",
+      "origin": "CRL",
+      "potential_deal": false,
+      "price_eur": 277.0,
+      "return_date": "2027-03-07",
+      "saving_eur": null,
+      "saving_pct": null,
+      "source": "fast-flights-unofficial",
+      "state": "observed",
+      "stops": 0,
+      "verified": false
+    }
+  ],
   "queries_attempted": 3,
-  "scanned_offers": 0,
+  "scanned_offers": 1,
   "schema_version": 1,
   "source": "fast-flights",
-  "status": "error",
-  "updated_at": "2026-11-17T04:09:26+00:00"
+  "status": "partial",
+  "updated_at": "2026-11-17T14:51:05+00:00"
 }
