@@ -1,6 +1,10 @@
 {
   "disclaimer": "Indicative observed prices, not guaranteed bookable fares; confirm price and baggage on booking site.",
-  "errors": [],
+  "errors": [
+    "BRU->MAD FlightsNotFound: no flights found; received error",
+    "CDG->MAD FlightsNotFound: no flights found; received error",
+    "EIN->BKK FlightsNotFound: no flights found; received error"
+  ],
   "history_observations": 528,
   "offers": [
     {
@@ -131,9 +135,9 @@
     }
   ],
   "queries_attempted": 3,
-  "scanned_offers": 10,
+  "scanned_offers": 0,
   "schema_version": 1,
   "source": "fast-flights",
-  "status": "ok",
-  "updated_at": "2026-11-19T02:46:10+00:00"
+  "status": "error",
+  "updated_at": "2026-11-19T14:39:22+00:00"
 }
