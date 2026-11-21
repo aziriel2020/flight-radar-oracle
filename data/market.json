@@ -1,6 +1,7 @@
 {
   "disclaimer": "Indicative observed prices, not guaranteed bookable fares; confirm price and baggage on booking site.",
   "errors": [
+    "BRU->MAD FlightsNotFound: no flights found; received error",
     "CDG->MAD FlightsNotFound: no flights found; received error",
     "DUS->RAK FlightsNotFound: no flights found; received error"
   ],
@@ -50,9 +51,9 @@
     }
   ],
   "queries_attempted": 3,
-  "scanned_offers": 5,
+  "scanned_offers": 0,
   "schema_version": 1,
   "source": "fast-flights",
-  "status": "partial",
-  "updated_at": "2026-11-21T02:46:46+00:00"
+  "status": "error",
+  "updated_at": "2026-11-21T13:41:00+00:00"
 }
