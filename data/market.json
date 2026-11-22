@@ -1,6 +1,8 @@
 {
   "disclaimer": "Indicative observed prices, not guaranteed bookable fares; confirm price and baggage on booking site.",
   "errors": [
+    "DUS->ATH FlightsNotFound: no flights found; received error",
+    "DUS->OPO FlightsNotFound: no flights found; received error",
     "EIN->OPO FlightsNotFound: no flights found; received error"
   ],
   "history_observations": 465,
@@ -175,9 +177,9 @@
     }
   ],
   "queries_attempted": 3,
-  "scanned_offers": 10,
+  "scanned_offers": 0,
   "schema_version": 1,
   "source": "fast-flights",
-  "status": "partial",
-  "updated_at": "2026-11-22T13:33:51+00:00"
+  "status": "error",
+  "updated_at": "2026-11-22T20:27:41+00:00"
 }
