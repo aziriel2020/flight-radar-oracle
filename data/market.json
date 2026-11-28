@@ -1,6 +1,10 @@
 {
   "disclaimer": "Indicative observed prices, not guaranteed bookable fares; confirm price and baggage on booking site.",
-  "errors": [],
+  "errors": [
+    "DUS->ATH FlightsNotFound: no flights found; received error",
+    "DUS->OPO FlightsNotFound: no flights found; received error",
+    "CDG->BCN FlightsNotFound: no flights found; received error"
+  ],
   "history_observations": 534,
   "offers": [
     {
@@ -215,9 +219,9 @@
     }
   ],
   "queries_attempted": 3,
-  "scanned_offers": 14,
+  "scanned_offers": 0,
   "schema_version": 1,
   "source": "fast-flights",
-  "status": "ok",
-  "updated_at": "2026-11-28T03:29:42+00:00"
+  "status": "error",
+  "updated_at": "2026-11-28T14:28:37+00:00"
 }
